@@ -3,13 +3,12 @@ var input = require('fs').readFileSync('stdin', 'utf8');
 
 var lines = input.split('\n');
 
-var NUMBER = parseInt(lines.shift());
+let id = parseInt(lines.shift());
 
-var B = parseInt(lines.shift());
-var C = parseFloat(lines.shift());
+let qhoras = parseInt(lines.shift());
+var valorHora = parseFloat(lines.shift());
 
 
-var SALARY = (B * C);
-
-console.log('NUMBER = ' + NUMBER + '\n' + 'SALARY = U$' + SALARY.toFixed(2));
-//console.log('SALARY = U$' + SALARY.toFixed(2));
+var SALARY = (qhoras * valorHora);
+console.log("NUMBER = " + id)
+console.log("SALARY = U$ " + SALARY.toFixed(2))

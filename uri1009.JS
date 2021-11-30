@@ -3,11 +3,10 @@ var input = require('fs').readFileSync('stdin', 'utf8');
 
 var lines = input.split('\n');
 
-var VEDOR = lines.shift();
+var nome = lines.shift();
+var salarioFixo = parseFloat(lines.shift());
+var totalVendas = parseFloat(lines.shift());
 
-var B = parseFloat(lines.shift());
-var C = parseFloat(lines.shift());
-
-var DIFERENCA = (A * B - C * D);
-var D = parseFloat(lines.shift());
-console.log('DIFERENCA = ' + DIFERENCA);
+var comissao = totalVendas * 0.15;
+var salarioFinal = salarioFixo + comissao;
+console.log("TOTAL = R$ " + salarioFinal.toFixed(2));
